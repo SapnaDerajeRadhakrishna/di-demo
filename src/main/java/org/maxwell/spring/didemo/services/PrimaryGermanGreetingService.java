@@ -1,17 +1,17 @@
 package org.maxwell.spring.didemo.services;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 @Service
 @Primary
-@Profile("en")
-public class PrimaryGreetingService implements GreetingService {
+@Profile("de")
+public class PrimaryGermanGreetingService implements GreetingService {
 
 	@Override
 	public String sayGreeting() {
-		return "Hello from PrimaryGreetingService";
+		return "Hallo vom primären Begrüßungsdienst";
 	}
 
 }
