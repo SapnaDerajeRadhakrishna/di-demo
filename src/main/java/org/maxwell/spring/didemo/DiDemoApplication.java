@@ -6,6 +6,7 @@ import org.maxwell.spring.didemo.controller.MyController;
 import org.maxwell.spring.didemo.examplebeans.DefaultDataSource;
 import org.maxwell.spring.didemo.examplebeans.FakeDataSource;
 import org.maxwell.spring.didemo.examplebeans.FakeJMSDataSource;
+import org.maxwell.spring.didemo.examplebeans.TestDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -22,6 +23,8 @@ public class DiDemoApplication {
 		System.out.println("### JMS USERNAME ##" + fakeJMSDataSource.getJmsUserName());
 		DefaultDataSource dataSource = (DefaultDataSource) ctx.getBean(DefaultDataSource.class);
 		System.out.println("### Default USERNAME ##" + dataSource.getUserName());
+		TestDataSource testDataSource = (TestDataSource) ctx.getBean(TestDataSource.class);
+		System.out.println("### USERNAME from yaml ##" + testDataSource.getTestUserName());
 
 		System.out.println(controller.sayHello());
 		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
