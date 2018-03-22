@@ -3,3 +3,11 @@ maxwell:
     username: maxwell1204
     password: 1204
     dburl: testurl
+
+--- #file separator
+spring:
+  profiles: de
+  
+maxwell:
+  test:
+    username: maxwell1204testgerman
